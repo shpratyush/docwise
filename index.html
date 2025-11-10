@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docwise - Smart Practice, Simplified</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hero-pattern {
+            background-color: #667eea;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .stat-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold gradient-text">Docwise</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 transition">Features</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 transition">How It Works</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                    <button class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-32 pb-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Transform Your Medical Practice
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+                    Enterprise-grade platform for independent doctors. Streamline appointments, conduct secure consultations, and grow your practice with intelligent automation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition shadow-xl">
+                        Start Free Trial
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition">
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-4xl font-bold">500+</div>
+                        <div class="text-indigo-100 mt-2">Active Doctors</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-4xl font-bold">10K+</div>
+                        <div class="text-indigo-100 mt-2">Consultations</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-4xl font-bold">98%</div>
+                        <div class="text-indigo-100 mt-2">Satisfaction</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-4xl font-bold">24/7</div>
+                        <div class="text-indigo-100 mt-2">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Complete Practice Management Solution</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Enterprise features designed for independent practitioners. Everything you need to deliver exceptional care and scale your practice.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Smart Scheduling</h3>
+                    <p class="text-gray-600">
+                        AI-powered slot optimization with customizable durations, break times, and timezone support. Eliminate scheduling conflicts and maximize efficiency.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Video Consultations</h3>
+                    <p class="text-gray-600">
+                        HIPAA-compliant video calling with file sharing, session recording, and real-time collaboration. Deliver quality care from anywhere.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">E-Prescription Builder</h3>
+                    <p class="text-gray-600">
+                        Intelligent prescription forms with medication database, dosage suggestions, and digital distribution. Save time while reducing errors.
+                    </p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Automated Billing</h3>
+                    <p class="text-gray-600">
+                        Complete payment processing with automatic invoicing, revenue tracking, and secure transactions. Focus on care, not paperwork.
+                    </p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">AI-Powered Insights</h3>
+                    <p class="text-gray-600">
+                        Automatically generate consultation summaries and clinical notes using advanced AI. Reduce documentation time by up to 70%.
+                    </p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Analytics Dashboard</h3>
+                    <p class="text-gray-600">
+                        Real-time insights on patient volume, revenue trends, and practice performance. Make data-driven decisions to grow your practice.
+                    </p>
+                </div>
+
+                <!-- Feature Card 7 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Professional Profile</h3>
+                    <p class="text-gray-600">
+                        SEO-optimized public profile page to establish your digital presence. Attract patients and build your personal brand online.
+                    </p>
+                </div>
+
+                <!-- Feature Card 8 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Smart Notifications</h3>
+                    <p class="text-gray-600">
+                        Multi-channel reminders via email, SMS, and WhatsApp. Reduce no-shows and keep patients engaged throughout their care journey.
+                    </p>
+                </div>
+
+                <!-- Feature Card 9 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Enterprise Security</h3>
+                    <p class="text-gray-600">
+                        Bank-level encryption, GDPR compliance, and role-based access control. Your data and your patients' privacy are our top priority.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How Docwise Works</h2>
+                <p class="text-xl text-gray-600">Get started in three simple steps</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 shadow-xl">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Create Your Profile</h3>
+                    <p class="text-gray-600">
+                        Register with complete KYC verification. Add your specialization, experience, and availability. Get verified by our admin team within 24 hours.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 shadow-xl">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Set Your Schedule</h3>
+                    <p class="text-gray-600">
+                        Configure your available slots, consultation fees, and preferred consultation modes. Our AI helps optimize your schedule for maximum efficiency.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 shadow-xl">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Start Consulting</h3>
+                    <p class="text-gray-600">
+                        Patients discover your profile, book appointments, and pay online. Conduct video consultations and manage everything from your dashboard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Patients Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Patient-Centric Experience</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Connect with verified healthcare professionals through a secure, intuitive platform designed for modern healthcare delivery.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="feature-icon w-10 h-10 rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Find the Right Doctor</h4>
+                                <p class="text-gray-600">Search by specialization, experience, rating, and availability</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="feature-icon w-10 h-10 rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Book Instantly</h4>
+                                <p class="text-gray-600">Choose your preferred slot and pay securely online</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="feature-icon w-10 h-10 rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Access Your Records</h4>
+                                <p class="text-gray-600">View prescriptions, visit history, and follow-up schedules</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="feature-icon w-10 h-10 rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Stay Informed</h4>
+                                <p class="text-gray-600">Get reminders and follow-up notifications automatically</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-3xl p-8 h-96 flex items-center justify-center">
+                    <div class="text-center">
+                        <svg class="w-32 h-32 mx-auto mb-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v4m0 4v4"/>
+                        </svg>
+                        <p class="text-gray-700 font-medium text-lg">Seamless Healthcare Access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600">Choose the plan that fits your practice</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Free</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">₹0</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Up to 20 appointments/month
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Basic scheduling
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            E-prescription builder
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Email notifications
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 shadow-2xl text-white transform scale-105">
+                    <div class="bg-white text-indigo-600 inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">₹1,999</span>
+                        <span class="text-indigo-200">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Unlimited appointments
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Video consultations
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Smart slot optimization
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            WhatsApp notifications
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Analytics dashboard
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-indigo-600 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Premium</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">₹3,999</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            AI visit summaries
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Session recording
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Advanced analytics
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <button class="w-full gradient-bg text-white py-3 rounded-full font-semibold hover:shadow-lg transition">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-600 mt-8">
+                <strong>Plus:</strong> 10-15% platform commission per consultation · Add-ons available for SMS credits & AI note packs
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Trusted by Healthcare Professionals</h2>
+                <p class="text-xl text-gray-600">See what doctors are saying about Docwise</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Docwise has transformed my practice management completely. The AI-powered summaries save hours each week, and my patients appreciate the professional booking experience. Revenue has increased by 40% since switching."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">
+                            RK
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Dr. Rajesh Kumar</h4>
+                            <p class="text-gray-600 text-sm">General Physician • 15 years exp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "As an independent practitioner, I needed a platform that's both powerful and simple. The video consultation quality is exceptional, and the automated reminders have reduced no-shows by 60%."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">
+                            PS
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Dr. Priya Sharma</h4>
+                            <p class="text-gray-600 text-sm">Dermatologist • 10 years exp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "The analytics dashboard provides insights I never had before. Understanding patient trends and optimizing my schedule has helped grow my practice by 35% in just six months."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">
+                            AM
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Dr. Anil Mehta</h4>
+                            <p class="text-gray-600 text-sm">Cardiologist • 20 years exp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Practice?
+            </h2>
+            <p class="text-xl mb-8 text-indigo-100">
+                Join hundreds of doctors who are already growing their independent practice with Docwise
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition shadow-xl">
+                    Start 14-Day Free Trial
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition">
+                    Schedule a Demo
+                </button>
+            </div>
+            <p class="text-indigo-100 mt-6 text-sm">
+                No credit card required · Setup in under 5 minutes · Cancel anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 gradient-text">Docwise</h3>
+                    <p class="text-sm">
+                        Empowering independent doctors with smart digital tools for modern practice management.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Press Kit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2025 Docwise. All rights reserved. Professional healthcare technology for independent practitioners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
